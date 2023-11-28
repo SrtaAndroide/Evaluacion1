@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="header">
+    <ion-title class="ion-text-center">
+     Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item >
+          <ion-label class="center" position="floating">Mail Duoc</ion-label>
+          <ion-input formControlName="mail_duoc"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="center" position="floating">password</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button color="boton" class="btn" (click)="ingresar()">
+        Ingresar
+      </ion-button>
+      <br>
+      <br>
+      <a href="rpassword">¿Olvidaste tu contraseña?</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar >
+    <ion-button color="boton" [routerLink]="['/registro']">REGISTRATE</ion-button>
+  </ion-toolbar>
+</ion-footer>
