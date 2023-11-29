@@ -24,3 +24,26 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+body, ion-footer {
+    background-color: transparent !important;
+    opacity: 1 !important;
+    z-index: 1;
+    background: url(./assets/utomovil.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Estilo Neon para el título */
+ion-title {
+    color: #8e44ad; /* Color púrpura */
+    text-shadow: 0 0 10px rgba(142, 68, 173, 0.9); /* Sombra de texto para resaltar */
+}
+
+/* Estilos Neon para otros elementos según sea necesario */
+/* Por ejemplo, para el texto en general */
+ion-label, ion-button, ion-note {
+    color: #8e44ad;
+    text-shadow: 0 0 10px rgba(142, 68, 173, 0.9);
+}
+
+/* Agrega más estilos de neón según sea necesario */
