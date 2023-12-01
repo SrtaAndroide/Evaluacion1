@@ -40,12 +40,11 @@ export class AlumnoPage implements OnInit {
     const { data: viajesData, error: viajesError } = await supabase
       .from('viaje')
       .select('*');
-
+  
     if (viajesError) {
       console.error('Error al obtener datos:', viajesError);
     } else {
       this.viajes = viajesData as Viaje[];
-
     }
   }
 
@@ -64,7 +63,7 @@ export class AlumnoPage implements OnInit {
         }
 
       if (viaje1.asiento_disponible === 0) {
-        this.navCtrl.navigateForward(['/viaje']);
+        this.navCtrl.navigateForward(['/viaje', viaje1.id]);
       } else {
         
         /*this.router.navigate(['/carga'], {
